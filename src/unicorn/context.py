@@ -25,7 +25,7 @@ class GCodeContext:
         "(Scribbled version of %s @ %.2f)" % (self.file, self.xy_feedrate),
         "( %s )" % " ".join(sys.argv),
         "G21 (metric ftw)",
-	"G1 X%.2f Y%.2f Z%0.2f (home)" % (self.x_home, self.y_home, self.finished_height),
+	"G1 X%.2f Y%.2f Z%0.2f (home)" % (self.x_home, self.y_home, self.z_height),
 	"",
 	"(Pen Calibration Routine)",
 	"",
@@ -38,11 +38,11 @@ class GCodeContext:
       self.postscript = [
         "",
 				"(end of print job)",
-				"G1 Z%0.2F (go up to finished level)" % self.finished_height,
+				"G1 Z%0.2F (go up to finished level)" % self.z_height,
 				#"G4 P%d (wait %dms)" % (self.stop_delay, self.stop_delay), #Add this once Staubli supports wait commands
 				#"M300 S255 (turn off servo)", #Add this once staubli supports enable and disable power through gcode
 				#"G1 F%0.2F" % self.xy_feedrate, #Add this once staubli supports set speed by gcode
-				"G1 X%0.2F Y%0.2F Z%0.2F (go home)" % (self.x_home, self.y_home, self.finished_height),
+				"G1 X%0.2F Y%0.2F Z%0.2F (go home)" % (self.x_home, self.y_home, self.z_height),
 				#"M18 (drives off)",
       ]
 
