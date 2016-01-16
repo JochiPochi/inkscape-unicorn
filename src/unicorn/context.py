@@ -47,13 +47,14 @@ class GCodeContext:
       ]
 
       self.registration = [
-        "M300 S%d (pen down)" % (self.pen_down_angle),
-        "G4 P%d (wait %dms)" % (self.start_delay, self.start_delay),
-        "M300 S%d (pen up)" % (self.pen_up_angle),
-        "G4 P%d (wait %dms)" % (self.stop_delay, self.stop_delay),
-        "M18 (disengage drives)",
-        "M01 (Was registration test successful?)",
-        "M17 (engage drives if YES, and continue)",
+        "(Self Registration is not supportted by Staubli yet)",
+        #"M300 S%d (pen down)" % (self.pen_down_angle),
+        #"G4 P%d (wait %dms)" % (self.start_delay, self.start_delay),
+        #"M300 S%d (pen up)" % (self.pen_up_angle),
+        #"G4 P%d (wait %dms)" % (self.stop_delay, self.stop_delay),
+        #"M18 (disengage drives)",
+        #"M01 (Was registration test successful?)",
+        #"M17 (engage drives if YES, and continue)",
         ""
       ]
 
