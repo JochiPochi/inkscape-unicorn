@@ -1,17 +1,13 @@
-MakerBot Unicorn G-Code Output for Inkscape
+Staubli Unicorn G-Code Output for Inkscape
 ===========================================
 
 This is an Inkscape extension that allows you to save your Inkscape drawings as
-G-Code files suitable for plotting with the [MakerBot Unicorn Pen Plotter](http://store.makerbot.com/makerbot-unicorn-pen-plotter-kit.html).
-
-Author: [Marty McGuire](http://github.com/martymcguire)
-
-Website: [http://github.com/martymcguire/inkscape-unicorn](http://github.com/martymcguire/inkscape-unicorn)
+G-Code files suitable for plotting with a Staubli RX60 Robotic Arm
 
 Credits
 =======
 
-* Marty McGuire pulled this all together into an Inkscape extension.
+* [Marty McGuire's Unicorn] http://github.com/martymcguire/inkscape-unicorn
 * [Inkscape](http://www.inkscape.org/) is an awesome open source vector graphics app.
 * [Scribbles](https://github.com/makerbot/Makerbot/tree/master/Unicorn/Scribbles%20Scripts) is the original DXF-to-Unicorn Python script.
 * [The Egg-Bot Driver for Inkscape](http://code.google.com/p/eggbotcode/) provided inspiration and good examples for working with Inkscape's extensions API.
