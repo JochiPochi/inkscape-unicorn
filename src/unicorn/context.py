@@ -25,8 +25,13 @@ class GCodeContext:
         "(Scribbled version of %s @ %.2f)" % (self.file, self.xy_feedrate),
         "( %s )" % " ".join(sys.argv),
         "G21 (metric ftw)",
-        "G90 (absolute mode)",
-        "G92 X%.2f Y%.2f Z%.2f (you are here)" % (self.x_home, self.y_home, self.z_height),
+	"G1 X%.2f Y%.2f Z%0.2f (home)" % (self.x_home, self.y_home, self.finished_height),
+	"",
+	"(Pen Calibration Routine)",
+	"",
+	"G1 X%.2f Y%.2f Z%.2f (pen up)" % (self.x_home, self.y_home, self.pen_up_angle),
+	"G1 X%.2f Y%.2f Z%.2f (pen down)" % (self.x_home, self.y_home, self.pen_down_angle),
+	"G1 X%.2f Y%.2f Z%.2f (pen up)" % (self.x_home, self.y_home, self.pen_up_angle),
         ""
       ]
 
