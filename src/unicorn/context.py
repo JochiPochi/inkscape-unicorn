@@ -136,7 +136,7 @@ class GCodeContext:
             self.codes.append("G1 Z%0.2F (pen up)"  % self.pen_up_angle) 
             #self.codes.append("G4 P%d (wait %dms)" % (self.stop_delay, self.stop_delay))
             self.drawing = False
-        self.codes.append("G1 X%.2f Y%.2f" % (x,y)
+        self.codes.append("G1 X%.2f Y%.2f" % (x,y))
       self.last = (x,y)
 	
     def draw_to_point(self, x, y, stop=False):
@@ -149,5 +149,5 @@ class GCodeContext:
             self.codes.append("G1 Z%0.2F (pen down)" % self.pen_down_angle)
             #self.codes.append("G4 P%d (wait %dms)" % (self.start_delay, self.start_delay))
             self.drawing = True
-        self.codes.append("G1 X%.2f Y%.2f" % (x,y)
+        self.codes.append("G1 X%.2f Y%.2f" % (x,y))
       self.last = (x,y)
